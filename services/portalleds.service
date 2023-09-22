@@ -1,0 +1,9 @@
+[Unit]
+Description=Portal lights
+
+[Service]
+User=root
+ExecStart=/usr/bin/python3 /home/portal/portal_scripts/portal_leds.py -c
+
+[Install]
+WantedBy=multi-user.target

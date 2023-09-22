@@ -1,0 +1,10 @@
+[Unit]
+Description=Portal stream
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/omxplayer -o hdmi --live -w --aspect-mode stretch --avdict rtsp_transport:tcp http://192.168.40.39:8080
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
